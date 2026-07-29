@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
+  <!-- Bandera de Extremadura: tres franjas horizontales verde, blanca y negra -->
+  <defs>
+    <clipPath id="r"><rect width="32" height="32" rx="6"/></clipPath>
+  </defs>
+  <g clip-path="url(#r)">
+    <rect width="32" height="11" y="0"  fill="#009A44"/>
+    <rect width="32" height="10" y="11" fill="#FFFFFF"/>
+    <rect width="32" height="11" y="21" fill="#0B0D0E"/>
+  </g>
+</svg>

@@ -1,0 +1,1234 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Salvemos la pesca del Bass y el Lucio en Extremadura | Presenta tu alegación al PGPEx</title>
+<meta name="description" content="El Plan General Piscícola de Extremadura restringe la pesca del black-bass y el lucio. Descarga el modelo de alegación y preséntalo antes de que acabe el plazo.">
+
+<!-- Open Graph: controla cómo se ve el enlace al compartirlo en WhatsApp y redes -->
+<meta property="og:type" content="website">
+<meta property="og:title" content="Salvemos la pesca del Bass y el Lucio en Extremadura">
+<meta property="og:description" content="Descarga el modelo de alegación al PGPEx y preséntalo. Tardas 5 minutos.">
+<meta property="og:locale" content="es_ES">
+<meta property="og:url" content="https://stop-pgpex.github.io/">
+<meta property="og:image" content="https://stop-pgpex.github.io/og-image.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="canonical" href="https://stop-pgpex.github.io/">
+<meta name="theme-color" content="#0D1012">
+
+<!-- Favicon: bandera de Extremadura (verde, blanco, negro) -->
+<link rel="icon" type="image/svg+xml" href="favicon.svg">
+<link rel="icon" type="image/png" sizes="32x32" href="favicon-32.png">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
+
+<script src="https://cdn.tailwindcss.com"></script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700;800&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@500&display=swap" rel="stylesheet">
+
+<script>
+  // Tokens de diseño centralizados: cambiar aquí afecta a toda la página
+  tailwind.config = {
+    theme: {
+      extend: {
+        colors: {
+          asfalto: '#0D1012',   // fondo base
+          pizarra: '#161B1E',   // superficies y tarjetas
+          borde:   '#262F34',   // separadores
+          rojo:    '#E01B2D',   // alerta / restricciones
+          verde:   '#24A65B',   // acción / llamadas a la acción
+          hueso:   '#E9EEF0',   // texto principal
+          agua:    '#3E92A3',   // acento frío: batimetría y citas del expediente
+        },
+        fontFamily: {
+          display: ['"Barlow Condensed"', 'Arial Narrow', 'sans-serif'],
+          sans:    ['Inter', 'system-ui', 'sans-serif'],
+          mono:    ['"JetBrains Mono"', 'ui-monospace', 'monospace'],
+        },
+      }
+    }
+  }
+</script>
+
+<style>
+  html { scroll-behavior: smooth; }
+  body { -webkit-font-smoothing: antialiased; }
+
+  /* Foco visible en teclado: accesibilidad mínima no negociable */
+  a:focus-visible, button:focus-visible {
+    outline: 2px solid #3E92A3;
+    outline-offset: 3px;
+  }
+
+  /* Franja diagonal de advertencia para el bloque del contador */
+  .franja-alerta {
+    background-image: repeating-linear-gradient(
+      -45deg,
+      rgba(224,27,45,.10) 0px, rgba(224,27,45,.10) 12px,
+      transparent 12px, transparent 24px
+    );
+  }
+
+  /* Respeta la preferencia del sistema de movimiento reducido */
+  @media (prefers-reduced-motion: reduce) {
+    html { scroll-behavior: auto; }
+    *, *::before, *::after { animation: none !important; transition: none !important; }
+  }
+</style>
+
+<!-- Estadísticas de visitas: anónimas y sin cookies (no requiere banner de consentimiento) -->
+<script data-goatcounter="https://stop-pgpex.goatcounter.com/count"
+        async src="https://gc.zgo.at/count.js"></script>
+</head>
+
+<body class="bg-asfalto text-hueso font-sans antialiased">
+
+<!-- Salto de navegación para lectores de pantalla y teclado -->
+<a href="#amenazas" class="sr-only focus:not-sr-only focus:absolute focus:top-3 focus:left-3 focus:z-50 focus:bg-verde focus:text-asfalto focus:px-4 focus:py-2 focus:rounded font-semibold">
+  Saltar al contenido
+</a>
+
+<!-- ============================================================
+     1. HERO — titular, urgencia y CTA principal
+     ============================================================ -->
+<header class="relative overflow-hidden border-b border-borde">
+
+  <!-- Textura de fondo: curvas batimétricas de un embalse.
+       Es el motivo visual de toda la página: el conflicto es sobre
+       QUÉ masas de agua quedan dentro y cuáles fuera. -->
+  <svg class="absolute inset-0 w-full h-full opacity-[0.16] pointer-events-none" aria-hidden="true"
+       viewBox="0 0 1200 700" preserveAspectRatio="xMidYMid slice">
+    <g fill="none" stroke="#3E92A3" stroke-width="1.1">
+      <path d="M-60,470 C140,400 250,520 430,470 C610,420 700,300 900,330 C1050,352 1160,300 1280,318"/>
+      <path d="M-60,510 C150,445 260,560 440,512 C620,464 706,346 902,374 C1052,396 1162,346 1280,362"/>
+      <path d="M-60,552 C160,492 272,600 452,556 C632,512 714,394 906,420 C1054,441 1164,394 1280,408"/>
+      <path d="M-60,596 C172,540 286,642 466,602 C646,562 722,442 910,466 C1056,486 1166,442 1280,456"/>
+      <path d="M-60,642 C186,590 300,686 480,650 C660,614 730,492 914,514 C1058,533 1168,492 1280,504"/>
+      <path d="M-60,180 C120,120 280,210 420,160 C560,110 660,180 820,150 C960,124 1100,168 1280,140"/>
+      <path d="M-60,226 C130,168 292,254 432,206 C572,158 668,224 828,196 C966,172 1104,212 1280,186"/>
+    </g>
+  </svg>
+  <div class="absolute inset-0 bg-gradient-to-b from-asfalto/40 via-asfalto/70 to-asfalto pointer-events-none" aria-hidden="true"></div>
+
+  <div class="relative max-w-6xl mx-auto px-5 sm:px-8 pt-14 pb-16 sm:pt-20 sm:pb-24">
+
+    <!-- Etiqueta de contexto: sitúa al visitante en 3 segundos -->
+    <p class="font-mono text-[11px] sm:text-xs tracking-[0.18em] text-agua uppercase mb-6">
+      Información pública · Plan General Piscícola de Extremadura
+    </p>
+
+    <h1 class="font-display font-extrabold uppercase leading-[0.92] tracking-tight text-4xl sm:text-6xl lg:text-7xl max-w-4xl">
+      Salvemos la pesca del
+      <span class="text-verde">Bass</span> y el
+      <span class="text-verde">Lucio</span>
+      en Extremadura
+    </h1>
+
+    <p class="mt-7 text-base sm:text-xl text-hueso/80 max-w-2xl leading-relaxed">
+      La versión inicial del PGPEx deja la pesca del black-bass y el lucio
+      fuera de casi todas las masas de agua de la región, prohíbe devolverlos al agua
+      salvo en una lista cerrada de grandes embalses y obliga a los guías a colaborar
+      en su eliminación.
+    </p>
+    <p class="mt-4 text-base sm:text-lg text-hueso/70 max-w-2xl leading-relaxed">
+      Está en información pública hasta el 14 de septiembre de 2026. Cualquier persona puede presentar
+      alegaciones, y la Administración está obligada a responderlas.
+      <strong class="text-hueso">Se tarda cinco minutos y no cuesta nada.</strong>
+    </p>
+
+    <!-- CTA principal: destino único, verbo de acción, sin competencia visual -->
+    <div class="mt-10 flex flex-col sm:flex-row gap-4 sm:items-center">
+      <a href="#descarga"
+         class="inline-flex items-center justify-center gap-3 bg-verde hover:bg-[#2CBE6A] text-asfalto font-display font-extrabold uppercase tracking-wide text-2xl sm:text-3xl px-8 sm:px-12 py-5 sm:py-6 rounded-md transition-colors shadow-lg shadow-verde/20">
+        <svg class="w-7 h-7 sm:w-8 sm:h-8 shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/>
+        </svg>
+        Descargar alegación
+      </a>
+      <a href="#comojunta" class="inline-flex items-center justify-center text-hueso/70 hover:text-hueso font-semibold underline underline-offset-4 decoration-borde hover:decoration-agua px-2 py-3 transition-colors">
+        Ver cómo se presenta
+      </a>
+    </div>
+
+  </div>
+</header>
+
+
+<!-- ============================================================
+     2. EL PROBLEMA — cuatro restricciones, cada una con su cita
+     ============================================================ -->
+<section id="amenazas" class="max-w-6xl mx-auto px-5 sm:px-8 py-16 sm:py-24 scroll-mt-6">
+
+  <div class="flex flex-col sm:flex-row sm:items-end sm:justify-between gap-4 mb-4">
+    <h2 class="font-display font-extrabold uppercase text-3xl sm:text-5xl tracking-tight">
+      Qué dice exactamente el plan
+    </h2>
+  </div>
+  <p class="text-hueso/65 max-w-3xl mb-10 sm:mb-12 leading-relaxed">
+    Cada punto lleva la referencia del apartado del PGPEx del que sale.
+    Puedes contrastarlo tú mismo en el documento oficial: es la diferencia entre
+    una alegación que se sostiene y un bulo que la Administración despacha en dos líneas.
+  </p>
+
+  <div class="grid gap-5 sm:gap-6 sm:grid-cols-2 lg:grid-cols-4">
+
+    <!-- Tarjeta 1 -->
+    <article class="bg-pizarra border border-borde rounded-lg p-6 flex flex-col hover:border-rojo/50 transition-colors">
+      <div class="text-rojo mb-5" aria-hidden="true">
+        <svg class="w-9 h-9" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round">
+          <circle cx="12" cy="12" r="9"/><line x1="5.6" y1="5.6" x2="18.4" y2="18.4"/>
+        </svg>
+      </div>
+      <h3 class="font-display font-bold uppercase text-xl leading-tight mb-3">
+        Sacrificio obligatorio
+      </h3>
+      <p class="text-sm text-hueso/70 leading-relaxed flex-grow">
+        Queda prohibido devolver al agua el black-bass y el lucio
+        <strong class="text-hueso">fuera de una lista cerrada de grandes embalses</strong>.
+        En cualquier otra masa de agua (charcas, embalses pequeños, ríos) el ejemplar
+        capturado no puede volver al agua.
+      </p>
+      <p class="mt-5 pt-4 border-t border-borde font-mono text-[11px] text-agua tracking-wide">
+        PGPEx · Anexo XI + ap. 8.2.3
+      </p>
+    </article>
+
+    <!-- Tarjeta 2 -->
+    <article class="bg-pizarra border border-borde rounded-lg p-6 flex flex-col hover:border-rojo/50 transition-colors">
+      <div class="text-rojo mb-5" aria-hidden="true">
+        <svg class="w-9 h-9" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M2 17.5c1.8 0 1.8 1.3 3.6 1.3s1.8-1.3 3.6-1.3 1.8 1.3 3.6 1.3 1.8-1.3 3.6-1.3 1.8 1.3 3.6 1.3"/>
+          <path d="M4.5 14.5 6 8.5h12l1.5 6"/><path d="M12 8.5v-4"/><path d="M12 4.5h4"/>
+        </svg>
+      </div>
+      <h3 class="font-display font-bold uppercase text-xl leading-tight mb-3">
+        Adiós al pato en aguas pequeñas
+      </h3>
+      <p class="text-sm text-hueso/70 leading-relaxed flex-grow">
+        En cotos consorciados en charcas, pantanos y embalses de
+        <strong class="text-hueso">menos de 100 hectáreas</strong> se pescará
+        "en general sólo desde orilla". El flotador o pato queda fuera, pese a no
+        llevar motor ni generar oleaje.
+      </p>
+      <p class="mt-5 pt-4 border-t border-borde font-mono text-[11px] text-agua tracking-wide">
+        PGPEx · ap. 8.5.5.3
+      </p>
+    </article>
+
+    <!-- Tarjeta 3 -->
+    <article class="bg-pizarra border border-borde rounded-lg p-6 flex flex-col hover:border-rojo/50 transition-colors">
+      <div class="text-rojo mb-5" aria-hidden="true">
+        <svg class="w-9 h-9" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M8 21h8"/><path d="M12 17v4"/><path d="M7 4h10v5a5 5 0 0 1-10 0V4z"/>
+          <path d="M17 5h3v2a3 3 0 0 1-3 3"/><path d="M7 5H4v2a3 3 0 0 0 3 3"/>
+        </svg>
+      </div>
+      <h3 class="font-display font-bold uppercase text-xl leading-tight mb-3">
+        Concursos sin salida
+      </h3>
+      <p class="text-sm text-hueso/70 leading-relaxed flex-grow">
+        En los escenarios de concurso es obligatorio devolver vivas todas las capturas
+        <strong class="text-hueso">"a excepción de las de carácter invasor"</strong>.
+        Como el bass lo es, la captura y suelta (única modalidad de la disciplina)
+        se queda sin encaje legal.
+      </p>
+      <p class="mt-5 pt-4 border-t border-borde font-mono text-[11px] text-agua tracking-wide">
+        PGPEx · ap. 2.1.2.5
+      </p>
+    </article>
+
+    <!-- Tarjeta 4 -->
+    <article class="bg-pizarra border border-borde rounded-lg p-6 flex flex-col hover:border-rojo/50 transition-colors">
+      <div class="text-rojo mb-5" aria-hidden="true">
+        <svg class="w-9 h-9" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M21 11.5a8.4 8.4 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.4 8.4 0 0 1-3.8-.9L3 21l1.9-5.7a8.4 8.4 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.4 8.4 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/>
+          <line x1="5" y1="19" x2="19" y2="5"/>
+        </svg>
+      </div>
+      <h3 class="font-display font-bold uppercase text-xl leading-tight mb-3">
+        Límites a lo que publicas
+      </h3>
+      <p class="text-sm text-hueso/70 leading-relaxed flex-grow">
+        El plan no permite la difusión de prácticas o eventos que promuevan el
+        incumplimiento de la erradicación, y el anexo añade la prohibición de su
+        <strong class="text-hueso">"difusión pública y fomento"</strong>,
+        sin definir dónde acaba divulgar una captura legal.
+      </p>
+      <p class="mt-5 pt-4 border-t border-borde font-mono text-[11px] text-agua tracking-wide">
+        PGPEx · aps. 8.2.3 y 8.5.6.3
+      </p>
+    </article>
+
+  </div>
+
+  <!-- Matiz honesto: reconocer lo que el plan SÍ permite blinda la campaña -->
+  <aside class="mt-8 border-l-2 border-agua bg-pizarra/60 px-6 py-5 rounded-r-lg">
+    <p class="text-sm text-hueso/70 leading-relaxed">
+      <strong class="text-hueso">Para ser exactos:</strong> el plan sí mantiene el bass y el lucio como
+      especies pescables, sin límite de talla, cupo ni temporada, en unos veinte grandes embalses
+      del Guadiana y el Tajo (Cíjara, Orellana, La Serena, Zújar, Alange, Alqueva, Valdecañas,
+      Alcántara, Gabriel y Galán y otros). El problema es todo lo que queda fuera de esa lista
+      y la contradicción entre la memoria y el anexo, que nadie sabe cómo se aplicará.
+    </p>
+    <!-- Documentación oficial: que nadie tenga que fiarse de esta web -->
+    <p class="mt-4 pt-4 border-t border-borde/60 text-sm leading-loose">
+      <span class="font-mono text-[11px] uppercase tracking-[0.16em] text-hueso/40 mr-2">Fuentes oficiales</span>
+      <a href="https://www.juntaex.es/w/plan-general-piscicola-de-extremadura-pgpex-y-estudio-ambiental-estrategico" target="_blank" rel="noopener" class="text-agua hover:text-hueso underline underline-offset-4 decoration-agua/40">Trámite de participación</a>
+      <span class="text-hueso/30 mx-1">·</span>
+      <a href="https://api-ciudadano.juntaex.es/api-jex/procesoParticipativo/downloadFileProcesoParticipativo2/version_inicial_PGPEx-10-07-2026-08-34-19.pdf" target="_blank" rel="noopener" class="text-agua hover:text-hueso underline underline-offset-4 decoration-agua/40">Versión inicial del PGPEx (PDF)</a>
+      <span class="text-hueso/30 mx-1">·</span>
+      <a href="https://api-ciudadano.juntaex.es/api-jex/procesoParticipativo/downloadFileProcesoParticipativo2/26081167-10-07-2026-08-34-09.pdf" target="_blank" rel="noopener" class="text-agua hover:text-hueso underline underline-offset-4 decoration-agua/40">Anuncio DOE n.º 132</a>
+      <span class="text-hueso/30 mx-1">·</span>
+      <a href="https://api-ciudadano.juntaex.es/api-jex/procesoParticipativo/downloadFileProcesoParticipativo2/estudio_ambiental_estrat%C3%A9gico_PGPEx-10-07-2026-08-34-09.pdf" target="_blank" rel="noopener" class="text-agua hover:text-hueso underline underline-offset-4 decoration-agua/40">Estudio ambiental estratégico</a>
+    </p>
+  </aside>
+</section>
+
+
+<!-- ============================================================
+     3. CONTADOR — urgencia con cuenta atrás en Vanilla JS
+     ============================================================ -->
+<section class="border-y border-rojo/30 bg-rojo/[0.07] franja-alerta">
+  <div class="max-w-6xl mx-auto px-5 sm:px-8 py-12 sm:py-16 text-center">
+
+    <p class="font-mono text-[11px] sm:text-xs tracking-[0.18em] text-rojo uppercase mb-4">
+      Tiempo restante para presentar alegaciones
+    </p>
+
+    <!-- Los valores los inyecta el script; el HTML sirve el estado inicial -->
+    <div id="cuenta-atras" class="flex justify-center gap-3 sm:gap-6" role="timer" aria-live="off">
+      <div class="min-w-[72px] sm:min-w-[110px] bg-asfalto border border-rojo/40 rounded-lg px-3 sm:px-6 py-4">
+        <div id="ca-dias" class="font-display font-extrabold text-4xl sm:text-6xl leading-none tabular-nums">--</div>
+        <div class="font-mono text-[10px] sm:text-xs uppercase tracking-widest text-hueso/50 mt-2">Días</div>
+      </div>
+      <div class="min-w-[72px] sm:min-w-[110px] bg-asfalto border border-rojo/40 rounded-lg px-3 sm:px-6 py-4">
+        <div id="ca-horas" class="font-display font-extrabold text-4xl sm:text-6xl leading-none tabular-nums">--</div>
+        <div class="font-mono text-[10px] sm:text-xs uppercase tracking-widest text-hueso/50 mt-2">Horas</div>
+      </div>
+      <div class="min-w-[72px] sm:min-w-[110px] bg-asfalto border border-rojo/40 rounded-lg px-3 sm:px-6 py-4">
+        <div id="ca-min" class="font-display font-extrabold text-4xl sm:text-6xl leading-none tabular-nums">--</div>
+        <div class="font-mono text-[10px] sm:text-xs uppercase tracking-widest text-hueso/50 mt-2">Min</div>
+      </div>
+      <div class="min-w-[72px] sm:min-w-[110px] bg-asfalto border border-rojo/40 rounded-lg px-3 sm:px-6 py-4">
+        <div id="ca-seg" class="font-display font-extrabold text-4xl sm:text-6xl leading-none tabular-nums text-rojo">--</div>
+        <div class="font-mono text-[10px] sm:text-xs uppercase tracking-widest text-hueso/50 mt-2">Seg</div>
+      </div>
+    </div>
+
+    <p id="ca-fecha" class="mt-6 text-sm text-hueso/60"></p>
+  </div>
+</section>
+
+
+<!-- ============================================================
+     4. LA ALEGACIÓN — formulario que genera el documento a medida
+     ============================================================ -->
+<section id="descarga" class="max-w-6xl mx-auto px-5 sm:px-8 py-16 sm:py-24 scroll-mt-6">
+
+  <h2 class="font-display font-extrabold uppercase text-3xl sm:text-5xl tracking-tight mb-4">
+    Genera tu alegación
+  </h2>
+  <p class="text-hueso/65 max-w-3xl mb-6 leading-relaxed">
+    Catorce alegaciones, cada una con el apartado del plan que impugna y una propuesta
+    concreta de redacción alternativa. Rellena tus datos, elige las que quieras incluir
+    y descarga el documento listo para presentar, en Word o en PDF.
+  </p>
+
+  <!-- Garantía de privacidad: destacada, es la objeción número uno del usuario -->
+  <div class="max-w-3xl mb-10 border-2 border-verde/60 bg-verde/[0.10] rounded-lg px-6 py-5">
+    <div class="flex items-start gap-4">
+      <svg class="w-8 h-8 text-verde shrink-0 mt-0.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+        <rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/>
+      </svg>
+      <div class="text-sm sm:text-base text-hueso/90 leading-relaxed">
+        <p>
+          <strong class="text-verde">Tus datos no se comparten ni se guardan en ningún sitio.</strong>
+          Ni aquí, ni en un servidor, ni con nadie. Todo lo que escribes se procesa dentro del propio
+          navegador del teléfono u ordenador desde el que estás visitando esta web, y el documento se
+          crea ahí mismo, en tu dispositivo. Cuando cierras la pestaña, no queda nada. Esta web no usa
+          cookies ni recoge información personal de ningún tipo.
+        </p>
+        <p class="mt-3 text-hueso/70 text-sm">
+          Y no tienes que fiarte solo de nuestra palabra: el código de esta web es público y
+          cualquiera puede revisarlo para comprobar que funciona exactamente así. Está disponible en
+          <a href="https://github.com/stop-pgpex/stop-pgpex.github.io" target="_blank" rel="noopener" class="text-verde hover:text-hueso underline underline-offset-2">GitHub</a>,
+          la plataforma donde se publica código abierto para que todo el mundo pueda verlo.
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <div class="grid lg:grid-cols-2 gap-8">
+
+    <!-- ==== COLUMNA IZQUIERDA: FORMULARIO ==== -->
+    <div class="flex flex-col gap-6">
+
+      <!-- Datos personales -->
+      <div class="bg-pizarra border border-borde rounded-lg p-6">
+        <h3 class="font-display font-bold uppercase text-lg mb-1">Tus datos</h3>
+        <p class="text-xs text-hueso/50 mb-5">Puedes dejarlos en blanco y rellenar a mano el documento después.</p>
+        <div class="grid sm:grid-cols-2 gap-4">
+          <label class="block sm:col-span-2">
+            <span class="text-xs font-semibold text-hueso/70">Nombre y apellidos</span>
+            <input type="text" id="f-nombre" autocomplete="off"
+                   class="mt-1 w-full bg-asfalto border border-borde rounded-md px-3 py-2.5 text-sm text-hueso focus:border-agua focus:outline-none">
+          </label>
+          <label class="block">
+            <span class="text-xs font-semibold text-hueso/70">DNI / NIE</span>
+            <input type="text" id="f-dni" autocomplete="off"
+                   class="mt-1 w-full bg-asfalto border border-borde rounded-md px-3 py-2.5 text-sm text-hueso focus:border-agua focus:outline-none">
+          </label>
+          <label class="block">
+            <span class="text-xs font-semibold text-hueso/70">Teléfono</span>
+            <input type="text" id="f-telefono" autocomplete="off"
+                   class="mt-1 w-full bg-asfalto border border-borde rounded-md px-3 py-2.5 text-sm text-hueso focus:border-agua focus:outline-none">
+          </label>
+          <label class="block sm:col-span-2">
+            <span class="text-xs font-semibold text-hueso/70">Domicilio a efectos de notificaciones</span>
+            <input type="text" id="f-domicilio" autocomplete="off"
+                   class="mt-1 w-full bg-asfalto border border-borde rounded-md px-3 py-2.5 text-sm text-hueso focus:border-agua focus:outline-none">
+          </label>
+          <label class="block">
+            <span class="text-xs font-semibold text-hueso/70">Municipio y C.P.</span>
+            <input type="text" id="f-municipio" autocomplete="off"
+                   class="mt-1 w-full bg-asfalto border border-borde rounded-md px-3 py-2.5 text-sm text-hueso focus:border-agua focus:outline-none">
+          </label>
+          <label class="block">
+            <span class="text-xs font-semibold text-hueso/70">Correo electrónico</span>
+            <input type="text" id="f-email" autocomplete="off"
+                   class="mt-1 w-full bg-asfalto border border-borde rounded-md px-3 py-2.5 text-sm text-hueso focus:border-agua focus:outline-none">
+          </label>
+          <label class="block sm:col-span-2">
+            <span class="text-xs font-semibold text-hueso/70">Licencia / club / empresa (si procede)</span>
+            <input type="text" id="f-licencia" autocomplete="off"
+                   class="mt-1 w-full bg-asfalto border border-borde rounded-md px-3 py-2.5 text-sm text-hueso focus:border-agua focus:outline-none">
+          </label>
+        </div>
+      </div>
+
+      <!-- Afección personal -->
+      <div class="bg-pizarra border border-borde rounded-lg p-6">
+        <h3 class="font-display font-bold uppercase text-lg mb-1">Tu caso concreto</h3>
+        <p class="text-xs text-hueso/50 mb-4">
+          Lo más importante del escrito. Dónde pescas y desde cuándo, si compites o vives de esto,
+          y qué te supondría el plan. Un párrafo con tu caso evita que respondan a tu alegación con una
+          contestación tipo idéntica para todos.
+        </p>
+        <textarea id="f-afeccion" rows="4" placeholder="Ejemplo: Pesco black-bass desde hace 12 años en el embalse de... Compito en la categoría... con el club... Regento una tienda de pesca en... El plan afectaría directamente a..."
+                  class="w-full bg-asfalto border border-borde rounded-md px-3 py-2.5 text-sm text-hueso focus:border-agua focus:outline-none resize-y"></textarea>
+      </div>
+
+      <!-- Recordatorio antes de presentar -->
+      <div class="bg-pizarra border border-borde rounded-lg p-6">
+        <h3 class="font-display font-bold uppercase text-lg mb-4">Antes de presentarla</h3>
+        <ul class="space-y-3 text-sm text-hueso/70">
+          <li class="flex gap-3"><span class="text-verde font-bold shrink-0">1.</span> Revisa que tus datos están completos. Sin nombre y DNI no se tramita.</li>
+          <li class="flex gap-3"><span class="text-verde font-bold shrink-0">2.</span> Rellena tu caso concreto. Es lo que impide que respondan a todos con la misma contestación tipo.</li>
+          <li class="flex gap-3"><span class="text-verde font-bold shrink-0">3.</span> Guarda el justificante de registro. Es tu prueba de que alegaste en plazo.</li>
+          <li class="flex gap-3"><span class="text-verde font-bold shrink-0">4.</span> El plazo acaba el 14 de septiembre de 2026. No apures: los registros presenciales cierran a mediodía.</li>
+        </ul>
+      </div>
+
+    </div>
+
+    <!-- ==== COLUMNA DERECHA: VISTA PREVIA + DESCARGA ==== -->
+    <div class="flex flex-col gap-4">
+
+      <!-- Botones de descarga -->
+      <div class="grid grid-cols-2 gap-3">
+        <button type="button" id="btn-word"
+                class="flex items-center justify-center gap-2.5 bg-[#2B579A] hover:bg-[#1e3f70] text-white font-bold px-4 py-4 rounded-md transition-colors">
+          <svg class="w-6 h-6 shrink-0" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+            <path d="M21 3H8a1 1 0 0 0-1 1v3H4a1 1 0 0 0-1 1v8a1 1 0 0 0 1 1h3v3a1 1 0 0 0 1 1h13a1 1 0 0 0 1-1V4a1 1 0 0 0-1-1zm0 16H9v-2h9V7H9V5h12v14zM4.9 8.7h1.5l.8 3.6.9-3.6h1.3l.9 3.6.8-3.6h1.5l-1.4 6.6H9.7l-.9-3.7-.9 3.7H6.3L4.9 8.7z"/>
+          </svg>
+          <span class="text-left leading-tight">Descargar<br>Word</span>
+        </button>
+        <button type="button" id="btn-pdf"
+                class="flex items-center justify-center gap-2.5 bg-[#D93025] hover:bg-[#b3241b] text-white font-bold px-4 py-4 rounded-md transition-colors">
+          <svg class="w-6 h-6 shrink-0" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+            <path d="M7 3a1 1 0 0 0-1 1v16a1 1 0 0 0 1 1h10a1 1 0 0 0 1-1V8l-5-5H7zm6 1.5L16.5 8H13V4.5zM8.4 12.2h1.5c.9 0 1.5.6 1.5 1.5s-.6 1.5-1.5 1.5h-.6v1.4H8.4v-4.4zm1.4 1.9c.3 0 .5-.2.5-.4s-.2-.4-.5-.4h-.5v.8h.5zm2.3-1.9h1.4c1 0 1.7.8 1.7 2.2s-.7 2.2-1.7 2.2h-1.4v-4.4zm1.3 3.4c.4 0 .7-.4.7-1.2s-.3-1.2-.7-1.2h-.4v2.4h.4z"/>
+          </svg>
+          <span class="text-left leading-tight">Descargar<br>PDF</span>
+        </button>
+      </div>
+
+      <!-- Aviso descarga vacía / rellena -->
+      <p id="aviso-relleno" class="text-xs text-hueso/55 text-center leading-relaxed px-2"></p>
+
+      <!-- Selección de alegaciones -->
+      <div class="bg-pizarra border border-borde rounded-lg p-6">
+        <div class="flex items-center justify-between mb-1">
+          <h3 class="font-display font-bold uppercase text-lg">Alegaciones a incluir</h3>
+          <button type="button" id="btn-toggle-todas"
+                  class="text-xs font-semibold text-agua hover:text-hueso underline underline-offset-2">
+            Quitar todas
+          </button>
+        </div>
+        <p class="text-xs text-hueso/50 mb-4">
+          Por defecto van todas. Puedes quitar las que no te afecten: el documento se ajusta solo
+          y las alegaciones se renumeran.
+        </p>
+        <div id="lista-alegaciones" class="space-y-2 max-h-72 overflow-y-auto pr-1">
+          <!-- lo rellena el JS -->
+        </div>
+      </div>
+
+      <!-- Vista previa del documento -->
+      <div class="bg-pizarra border border-borde rounded-lg overflow-hidden">
+        <div class="flex items-center gap-2 px-4 py-3 border-b border-borde bg-asfalto/60">
+          <span class="w-2.5 h-2.5 rounded-full bg-rojo/70"></span>
+          <span class="w-2.5 h-2.5 rounded-full bg-hueso/25"></span>
+          <span class="w-2.5 h-2.5 rounded-full bg-verde/70"></span>
+          <span class="ml-2 font-mono text-[11px] text-hueso/50">alegacion-pgpex.docx</span>
+          <span id="contador-alegaciones" class="ml-auto font-mono text-[11px] text-hueso/40"></span>
+        </div>
+        <div id="texto-alegacion" class="p-5 sm:p-7 max-h-[30rem] overflow-y-auto font-mono text-[12px] leading-relaxed text-hueso/75 whitespace-pre-line">
+          <!-- lo rellena el JS -->
+        </div>
+      </div>
+
+      <button type="button" id="btn-copiar"
+              class="flex items-center justify-center gap-3 border border-borde hover:border-agua bg-pizarra text-hueso font-semibold px-6 py-3 rounded-md transition-colors">
+        <svg class="w-5 h-5 shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/>
+        </svg>
+        <span id="txt-copiar">Copiar el texto</span>
+      </button>
+
+    </div>
+
+  </div>
+</section>
+
+
+<!-- ============================================================
+     5. MANUAL DE PRESENTACIÓN — dos vías, telemática y física
+     ============================================================ -->
+<section id="comojunta" class="border-t border-borde bg-pizarra/40 scroll-mt-6">
+  <div class="max-w-6xl mx-auto px-5 sm:px-8 py-16 sm:py-24">
+
+    <h2 class="font-display font-extrabold uppercase text-3xl sm:text-5xl tracking-tight mb-4">
+      Cómo se presenta
+    </h2>
+    <p class="text-hueso/65 max-w-3xl mb-12 leading-relaxed">
+      Dos caminos válidos. Si tienes certificado digital o Cl@ve, la vía telemática
+      es cuestión de minutos y te da el justificante al instante.
+    </p>
+
+    <div class="grid md:grid-cols-2 gap-6 sm:gap-8">
+
+      <!-- Vía telemática -->
+      <article class="bg-asfalto border border-borde rounded-lg p-6 sm:p-8">
+        <div class="flex items-center gap-3 mb-6">
+          <span class="text-verde" aria-hidden="true">
+            <svg class="w-8 h-8" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8"/><path d="M12 17v4"/>
+            </svg>
+          </span>
+          <h3 class="font-display font-extrabold uppercase text-2xl">Vía telemática</h3>
+        </div>
+
+        <p class="text-sm text-hueso/60 mb-5">Necesitas certificado digital, DNIe o Cl@ve.</p>
+
+        <ol class="space-y-4 text-sm text-hueso/80">
+          <li class="flex gap-3">
+            <span class="font-mono text-agua shrink-0">01</span>
+            <span>Vía directa: entra en el
+            <a href="https://www.juntaex.es/w/plan-general-piscicola-de-extremadura-pgpex-y-estudio-ambiental-estrategico" target="_blank" rel="noopener" class="text-agua hover:text-hueso underline underline-offset-2">trámite oficial de la Junta</a>
+            y pulsa <strong class="text-hueso">«Participa»</strong>. Te pedirá identificarte en Mi Espacio con certificado, DNIe o Cl@ve.</span>
+          </li>
+          <li class="flex gap-3">
+            <span class="font-mono text-agua shrink-0">02</span>
+            <span>Alternativa que vale igual: <strong class="text-hueso">Registro Electrónico General</strong>
+            (<span class="font-mono text-xs text-agua">rec.redsara.gob.es</span>) → destinatario <strong class="text-hueso">Junta de Extremadura</strong> →
+            Consejería de Agricultura, Ganadería y Medio Natural → Dirección General de Caza, Pesca, Acuicultura, Tauromaquia y Medio Natural.</span>
+          </li>
+          <li class="flex gap-3">
+            <span class="font-mono text-agua shrink-0">03</span>
+            <span>Asunto: <em class="text-hueso">Alegaciones a la versión inicial del PGPEx y su estudio ambiental estratégico
+            (información pública, DOE n.º 132, de 10/07/2026)</em>.</span>
+          </li>
+          <li class="flex gap-3">
+            <span class="font-mono text-agua shrink-0">04</span>
+            <span>Adjunta la alegación (mejor en PDF: <span class="text-hueso">Archivo → Guardar como → PDF</span>) y firma el envío.</span>
+          </li>
+          <li class="flex gap-3">
+            <span class="font-mono text-agua shrink-0">05</span>
+            <span><strong class="text-hueso">Descarga el justificante.</strong> Lleva número de registro, fecha y hora.</span>
+          </li>
+        </ol>
+
+        <p class="mt-6 pt-5 border-t border-borde text-xs text-hueso/50 leading-relaxed">
+          El anuncio del DOE también admite enviar las alegaciones por correo electrónico a
+          <span class="font-mono text-agua">gestionpiscicola@juntaex.es</span>. Es la vía más rápida,
+          pero no genera justificante de registro: si la usas, guarda el correo enviado y no lo dejes
+          para el último día.
+        </p>
+      </article>
+
+      <!-- Vía física -->
+      <article class="bg-asfalto border border-borde rounded-lg p-6 sm:p-8">
+        <div class="flex items-center gap-3 mb-6">
+          <span class="text-verde" aria-hidden="true">
+            <svg class="w-8 h-8" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M3 9l9-6 9 6v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/>
+            </svg>
+          </span>
+          <h3 class="font-display font-extrabold uppercase text-2xl">Vía presencial</h3>
+        </div>
+
+        <p class="text-sm text-hueso/60 mb-5">Sin certificado digital. Imprime el documento y fírmalo a mano.</p>
+
+        <ol class="space-y-4 text-sm text-hueso/80">
+          <li class="flex gap-3">
+            <span class="font-mono text-agua shrink-0">01</span>
+            <span>Imprime <strong class="text-hueso">dos copias</strong>: una se queda la Administración y otra te la sellan a ti.</span>
+          </li>
+          <li class="flex gap-3">
+            <span class="font-mono text-agua shrink-0">02</span>
+            <span>Llévalas a cualquier <strong class="text-hueso">Oficina de Asistencia en Materia de Registros</strong>:
+            registros de la Junta, delegaciones de la Administración General del Estado y la mayoría de ayuntamientos,
+            que digitalizan y remiten el escrito por ORVE. No hace falta desplazarse a Mérida.</span>
+          </li>
+          <li class="flex gap-3">
+            <span class="font-mono text-agua shrink-0">03</span>
+            <span>Alternativa por <strong class="text-hueso">Correos</strong>: pide correo administrativo y entrega
+            el sobre <em>abierto</em>, para que sellen la fecha en tu copia antes de cerrarlo. Ese sello es lo que
+            acredita que presentaste en plazo.</span>
+          </li>
+          <li class="flex gap-3">
+            <span class="font-mono text-agua shrink-0">04</span>
+            <span><strong class="text-hueso">Guarda tu copia sellada.</strong> Es tu única prueba si luego alegan que no consta.</span>
+          </li>
+        </ol>
+
+        <p class="mt-6 pt-5 border-t border-borde text-xs text-hueso/50 leading-relaxed">
+          Llama antes para confirmar horario de registro: muchas oficinas cierran a las 14:00 y no admiten
+          entregas el último día por la tarde.
+        </p>
+      </article>
+
+    </div>
+  </div>
+</section>
+
+
+<!-- ============================================================
+     6. CIERRE Y PIE — compartir y aviso legal
+     ============================================================ -->
+<section class="border-t border-borde">
+  <div class="max-w-6xl mx-auto px-5 sm:px-8 py-14 sm:py-20 text-center">
+    <h2 class="font-display font-extrabold uppercase text-3xl sm:text-5xl tracking-tight mb-4">
+      Una alegación pesa. Mil pesan más.
+    </h2>
+    <p class="text-hueso/65 max-w-2xl mx-auto mb-8 leading-relaxed">
+      La Administración tiene que responder de forma motivada a cada alegación presentada.
+      Pásale esto a tu club, a tu grupo de pesca y a la tienda donde compras.
+    </p>
+
+    <!-- Nota para clubes: individualizar multiplica el peso del expediente -->
+    <div class="max-w-2xl mx-auto mb-10 border border-verde/40 bg-verde/[0.06] rounded-lg px-6 py-5 text-left">
+      <p class="text-sm text-hueso/80 leading-relaxed">
+        <strong class="text-verde">Si llevas un club:</strong> presentad la del club y, además, que
+        <strong class="text-hueso">cada socio presente la suya</strong>, con sus datos y un par de frases
+        propias. Cien alegaciones individualizadas no se despachan con una respuesta tipo y dejan
+        constancia del volumen real de afectados. Reenvía el modelo al grupo y marcad un día para presentarlas.
+      </p>
+    </div>
+
+    <div class="flex flex-col sm:flex-row sm:flex-wrap gap-3 justify-center">
+      <!-- Compartir nativo: solo visible en navegadores con menú de compartir (móvil) -->
+      <button type="button" id="share-nativo"
+              class="hidden inline-flex items-center justify-center gap-2.5 bg-verde hover:bg-[#2CBE6A] text-asfalto font-bold px-7 py-3.5 rounded-md transition-colors">
+        <svg class="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/>
+          <line x1="8.6" y1="13.5" x2="15.4" y2="17.5"/><line x1="15.4" y1="6.5" x2="8.6" y2="10.5"/>
+        </svg>
+        Compartir
+      </button>
+      <a id="share-wa" href="#" target="_blank" rel="noopener"
+         class="inline-flex items-center justify-center gap-2.5 bg-[#25D366] hover:bg-[#1FBE5A] text-asfalto font-bold px-7 py-3.5 rounded-md transition-colors">
+        <svg class="w-5 h-5" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+          <path d="M17.5 14.4c-.3-.2-1.7-.9-2-1-.3-.1-.5-.1-.7.1-.2.3-.7 1-.9 1.2-.2.2-.3.2-.6.1-.3-.2-1.3-.5-2.4-1.5-.9-.8-1.5-1.8-1.6-2.1-.2-.3 0-.4.1-.6l.4-.5c.1-.2.2-.3.3-.5 0-.2 0-.4 0-.5 0-.2-.7-1.6-.9-2.2-.2-.6-.5-.5-.7-.5h-.6c-.2 0-.5.1-.8.4-.3.3-1 1-1 2.5s1.1 2.9 1.2 3.1c.1.2 2.1 3.2 5 4.5.7.3 1.2.5 1.7.6.7.2 1.3.2 1.8.1.6-.1 1.7-.7 1.9-1.4.2-.7.2-1.2.2-1.4-.1-.1-.3-.2-.5-.4M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2m0 18.2a8.2 8.2 0 0 1-4.2-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2"/>
+        </svg>
+        WhatsApp
+      </a>
+      <a id="share-tg" href="#" target="_blank" rel="noopener"
+         class="inline-flex items-center justify-center gap-2.5 bg-[#26A5E4] hover:bg-[#1E96D1] text-asfalto font-bold px-7 py-3.5 rounded-md transition-colors">
+        <svg class="w-5 h-5" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+          <path d="M21.9 4.6 19 19.3c-.2 1-.8 1.2-1.6.8l-4.5-3.3-2.2 2.1c-.2.2-.4.4-.9.4l.3-4.6L18.6 7c.4-.3-.1-.5-.6-.2l-10 6.3-4.3-1.3c-.9-.3-1-1 .2-1.4L20.5 3.2c.8-.3 1.6.2 1.4 1.4z"/>
+        </svg>
+        Telegram
+      </a>
+      <a id="share-fb" href="#" target="_blank" rel="noopener"
+         class="inline-flex items-center justify-center gap-2.5 bg-[#1877F2] hover:bg-[#1567D6] text-white font-bold px-7 py-3.5 rounded-md transition-colors">
+        <svg class="w-5 h-5" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+          <path d="M13.4 21.5v-8h2.7l.4-3.1h-3.1V8.4c0-.9.3-1.5 1.6-1.5h1.6V4.1c-.3 0-1.3-.1-2.4-.1-2.4 0-4 1.4-4 4.1v2.3H7.5v3.1h2.7v8h3.2z"/>
+        </svg>
+        Facebook
+      </a>
+      <a id="share-x" href="#" target="_blank" rel="noopener"
+         class="inline-flex items-center justify-center gap-2.5 border border-borde hover:border-hueso/40 bg-pizarra text-hueso font-bold px-7 py-3.5 rounded-md transition-colors">
+        <svg class="w-4 h-4" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+          <path d="M18.9 2h3.3l-7.2 8.2L23.5 22h-6.6l-5.2-6.8L5.7 22H2.4l7.7-8.8L2 2h6.8l4.7 6.2L18.9 2zm-1.2 18h1.8L7.4 3.8H5.5L17.7 20z"/>
+        </svg>
+        X
+      </a>
+    </div>
+
+    <!-- Instagram y TikTok no permiten compartir por enlace: se difunden con imagen -->
+    <p class="mt-7 text-sm text-hueso/50 leading-relaxed">
+      ¿Instagram o TikTok? <a href="story.jpg" download class="text-agua hover:text-hueso underline underline-offset-4 decoration-agua/40">Descarga la imagen para stories</a>
+      <span class="mx-1 text-hueso/30">·</span>
+      ¿Tienda o club? <a href="qr-stop-pgpex.png" download class="text-agua hover:text-hueso underline underline-offset-4 decoration-agua/40">QR para imprimir</a>
+      <span class="mx-1 text-hueso/30">·</span>
+      Etiqueta con <span class="font-mono text-agua">#StopPGPEx</span>
+    </p>
+  </div>
+</section>
+
+<footer class="border-t border-borde bg-pizarra/40">
+  <div class="max-w-6xl mx-auto px-5 sm:px-8 py-10 sm:py-12">
+    <p class="font-mono text-[11px] tracking-[0.16em] text-hueso/40 uppercase mb-4">Aviso legal</p>
+    <div class="grid md:grid-cols-2 gap-6 text-xs text-hueso/50 leading-relaxed max-w-4xl">
+      <p>
+        Iniciativa ciudadana independiente, sin vinculación con la Junta de Extremadura
+        ni con ninguna administración pública. Las referencias al PGPEx remiten al texto de la
+        versión inicial sometido a información pública, que es el documento que prevalece
+        sobre cualquier resumen publicado en esta página.
+      </p>
+      <p>
+        El modelo de alegación es orientativo y no constituye asesoramiento jurídico.
+        Revísalo y adáptalo antes de presentarlo. Verifica el plazo y el órgano de destino en el
+        <a href="https://api-ciudadano.juntaex.es/api-jex/procesoParticipativo/downloadFileProcesoParticipativo2/26081167-10-07-2026-08-34-09.pdf" target="_blank" rel="noopener" class="underline hover:text-hueso/80">anuncio del DOE n.º 132, de 10 de julio de 2026</a>:
+        esta web no sustituye a la información oficial. No se recogen datos personales; únicamente estadísticas de visitas anónimas y sin cookies.
+      </p>
+    </div>
+
+    <div class="mt-8 pt-6 border-t border-borde/60 text-center">
+      <p class="text-xs text-hueso/50 flex flex-wrap items-center justify-center gap-x-2 gap-y-1">
+        <span>
+          Web desarrollada por
+          <a href="https://github.com/JavierOlmedo/" target="_blank" rel="noopener" class="text-hueso/70 hover:text-hueso underline underline-offset-2 decoration-borde">Javier Olmedo</a>
+        </span>
+        <span class="text-hueso/25">|</span>
+        <span class="inline-flex items-center gap-1.5">
+          Hecho con
+          <svg class="w-3.5 h-3.5 text-rojo inline-block" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+            <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/>
+          </svg>
+          para Extremadura
+          <span class="inline-flex w-5 h-3.5 rounded-sm overflow-hidden align-middle ring-1 ring-white/10" aria-hidden="true">
+            <span class="flex-1 bg-[#009A44]"></span><span class="flex-1 bg-white"></span><span class="flex-1 bg-[#0B0D0E]"></span>
+          </span>
+        </span>
+      </p>
+    </div>
+  </div>
+</footer>
+
+
+<script>
+/* ============================================================
+   CONFIGURACIÓN — lo único que necesitas tocar
+   ============================================================ */
+
+// Fin del plazo: 14/9/2026, confirmado en el trámite oficial de juntaex.es
+// (Anuncio de 30/06/2026, DOE n.º 132 de 10/07/2026: 45 días hábiles).
+// Formato ISO con zona horaria peninsular (+02:00 en horario de verano).
+const FECHA_LIMITE = new Date('2026-09-14T23:59:59+02:00');
+
+// URL definitiva del sitio, usada en los botones de compartir.
+const URL_SITIO = window.location.href.split('#')[0];
+
+const TEXTO_COMPARTIR =
+  'La Junta de Extremadura quiere restringir la pesca del black-bass y el lucio. ' +
+  'Puedes alegar hasta el 14 de septiembre y se tarda 5 minutos. Modelo listo aquí:';
+
+
+/* ============================================================
+   CUENTA ATRÁS
+   ============================================================ */
+(function () {
+  const dias  = document.getElementById('ca-dias');
+  const horas = document.getElementById('ca-horas');
+  const min   = document.getElementById('ca-min');
+  const seg   = document.getElementById('ca-seg');
+  const pie   = document.getElementById('ca-fecha');
+  const caja  = document.getElementById('cuenta-atras');
+
+  // Muestra la fecha límite en texto, para que nadie dependa solo del contador
+  pie.textContent = 'El plazo termina el ' + FECHA_LIMITE.toLocaleDateString('es-ES', {
+    day: 'numeric', month: 'long', year: 'numeric'
+  }) + ' a las 23:59.';
+
+  const dosDigitos = n => String(n).padStart(2, '0');
+
+  function refrescar() {
+    const restante = FECHA_LIMITE - new Date();
+
+    // Plazo agotado: sustituimos el contador por un mensaje útil
+    if (restante <= 0) {
+      caja.innerHTML =
+        '<p class="font-display font-extrabold uppercase text-3xl sm:text-5xl text-rojo">' +
+        'Plazo cerrado</p>';
+      pie.textContent = 'El trámite de información pública ha finalizado. ' +
+        'Consulta en el DOE si se ha abierto una nueva fase de participación.';
+      clearInterval(temporizador);
+      return;
+    }
+
+    const s = Math.floor(restante / 1000);
+    dias.textContent  = Math.floor(s / 86400);
+    horas.textContent = dosDigitos(Math.floor(s / 3600) % 24);
+    min.textContent   = dosDigitos(Math.floor(s / 60) % 60);
+    seg.textContent   = dosDigitos(s % 60);
+  }
+
+  refrescar();
+  const temporizador = setInterval(refrescar, 1000);
+})();
+
+
+/* ============================================================
+   COMPARTIR
+   ============================================================ */
+(function () {
+  const url  = encodeURIComponent(URL_SITIO);
+  const txt  = encodeURIComponent(TEXTO_COMPARTIR);
+
+  document.getElementById('share-wa').href = 'https://wa.me/?text=' + encodeURIComponent(TEXTO_COMPARTIR + ' ' + URL_SITIO);
+  document.getElementById('share-tg').href = 'https://t.me/share/url?url=' + url + '&text=' + txt;
+  document.getElementById('share-fb').href = 'https://www.facebook.com/sharer/sharer.php?u=' + url;
+  document.getElementById('share-x').href  = 'https://twitter.com/intent/tweet?text=' + txt + '&url=' + url + '&hashtags=StopPGPEx';
+
+  // Instagram y TikTok no admiten compartir por URL: para ellas está la
+  // imagen de stories enlazada bajo los botones.
+
+  // Menú de compartir del sistema (móvil): cubre todo lo demás,
+  // incluidos los DM de Instagram. Solo se muestra si el navegador lo soporta.
+  const nativo = document.getElementById('share-nativo');
+  if (navigator.share) {
+    nativo.classList.remove('hidden');
+    nativo.addEventListener('click', function () {
+      navigator.share({ title: document.title, text: TEXTO_COMPARTIR, url: URL_SITIO }).catch(function () {});
+    });
+  }
+})();
+</script>
+
+<!-- Librerías para generar el documento en el navegador (sin servidor) -->
+<script src="https://cdn.jsdelivr.net/npm/docx@8.5.0/build/index.umd.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/pdf-lib@1.17.1/dist/pdf-lib.min.js"></script>
+<script src="alegaciones-data.js"></script>
+
+<script>
+/* ============================================================
+   GENERADOR DE ALEGACIÓN A MEDIDA
+   Todo ocurre en el cliente. Ningún dato sale del navegador.
+   ============================================================ */
+(function () {
+  const A = window.ALEGACIONES || [];
+
+  // Referencias a los campos del formulario
+  const campos = {
+    nombre:    document.getElementById('f-nombre'),
+    dni:       document.getElementById('f-dni'),
+    telefono:  document.getElementById('f-telefono'),
+    domicilio: document.getElementById('f-domicilio'),
+    municipio: document.getElementById('f-municipio'),
+    email:     document.getElementById('f-email'),
+    licencia:  document.getElementById('f-licencia'),
+    afeccion:  document.getElementById('f-afeccion'),
+  };
+  const lista       = document.getElementById('lista-alegaciones');
+  const preview     = document.getElementById('texto-alegacion');
+  const contador    = document.getElementById('contador-alegaciones');
+  const avisoRell   = document.getElementById('aviso-relleno');
+  const btnToggle   = document.getElementById('btn-toggle-todas');
+
+  // Estado: qué alegaciones están marcadas (todas al inicio)
+  const seleccion = new Set(A.map(function (al) { return al.id; }));
+
+  // --- Construye la lista de casillas de alegaciones ---
+  A.forEach(function (al) {
+    // Título corto: hasta el primer punto tras el ordinal
+    const partes = al.titulo.split('. ');
+    const ordinal = partes[0];
+    const resto = partes.slice(1).join('. ');
+    const label = document.createElement('label');
+    label.className = 'flex items-start gap-3 p-2 rounded hover:bg-asfalto/60 cursor-pointer';
+    label.innerHTML =
+      '<input type="checkbox" data-id="' + al.id + '" checked ' +
+      'class="mt-1 shrink-0 accent-[#24A65B] w-4 h-4">' +
+      '<span class="text-xs text-hueso/75 leading-snug">' +
+      '<strong class="text-hueso/90">' + ordinal + '.</strong> ' + escapeHtml(resto) + '</span>';
+    lista.appendChild(label);
+  });
+
+  // --- Utilidades ---
+  function escapeHtml(t) {
+    const d = document.createElement('div'); d.textContent = t; return d.innerHTML;
+  }
+  function val(el) { return (el && el.value ? el.value.trim() : ''); }
+  function linea(label, valor) {
+    return label + ': ' + (valor || '_'.repeat(40));
+  }
+
+  // Ordinales en femenino para renumerar las alegaciones elegidas
+  const ORD = ['PRIMERA','SEGUNDA','TERCERA','CUARTA','QUINTA','SEXTA','SÉPTIMA',
+    'OCTAVA','NOVENA','DÉCIMA','UNDÉCIMA','DUODÉCIMA','DECIMOTERCERA','DECIMOCUARTA',
+    'DECIMOQUINTA','DECIMOSEXTA'];
+
+  // Sustituye el ordinal original del título por el nuevo (renumerado)
+  function retitular(titulo, nuevoOrdinal) {
+    const idx = titulo.indexOf('. ');
+    return nuevoOrdinal + titulo.slice(idx);
+  }
+
+  // --- Devuelve el array de alegaciones elegidas, en orden ---
+  function elegidas() {
+    return A.filter(function (al) { return seleccion.has(al.id); });
+  }
+
+  // --- Detecta si el usuario ha rellenado algún dato ---
+  function hayDatos() {
+    return Object.keys(campos).some(function (k) { return val(campos[k]) !== ''; });
+  }
+
+  // ============================================================
+  //  Construcción del texto (vista previa y copia)
+  // ============================================================
+  function construirTexto() {
+    const els = elegidas();
+    let t = 'ALEGACIONES A LA VERSIÓN INICIAL DEL PLAN GENERAL PISCÍCOLA DE EXTREMADURA (PGPEx)\n\n';
+    t += 'A LA DIRECCIÓN GENERAL DE CAZA, PESCA, ACUICULTURA, TAUROMAQUIA Y MEDIO NATURAL. CONSEJERÍA DE AGRICULTURA, GANADERÍA Y MEDIO NATURAL. JUNTA DE EXTREMADURA.\n\n';
+
+    t += linea('Nombre y apellidos', val(campos.nombre)) + '\n';
+    t += linea('DNI / NIE', val(campos.dni)) + '\n';
+    t += linea('Domicilio a efectos de notificaciones', val(campos.domicilio)) + '\n';
+    t += linea('Municipio y código postal', val(campos.municipio)) + '\n';
+    t += linea('Correo electrónico', val(campos.email)) + '\n';
+    t += linea('Teléfono', val(campos.telefono)) + '\n';
+    t += linea('Licencia / club / empresa (si procede)', val(campos.licencia)) + '\n\n';
+
+    t += 'Actuando en nombre propio, como pescador o pescadora deportiva y practicante de la pesca del black-bass y del lucio, comparece en el trámite de información pública de la versión inicial del Plan General Piscícola de Extremadura (PGPEx) y su estudio ambiental estratégico, abierto por Anuncio de 30 de junio de 2026 y publicado en el Diario Oficial de Extremadura n.º 132, de 10 de julio de 2026, y dentro del plazo conferido\n\n';
+
+    t += 'EXPONE\n\n';
+    t += 'PRIMERO. Que ostenta la condición de interesado conforme al artículo 4 de la Ley 39/2015, por ser titular de intereses legítimos afectados por las determinaciones del Plan, y que practica habitualmente la pesca deportiva del black-bass y del lucio, tanto desde orilla como desde flotador o pato, catamarán y embarcación.\n\n';
+    t += 'SEGUNDO. Que manifiesta su rechazo a la aprobación del Plan en su redacción actual, por resultar manifiestamente perjudicial para esta modalidad deportiva, para sus competiciones y para la actividad económica y turística vinculada a ella.\n\n';
+    t += 'TERCERO. Que la presencia del black-bass y del lucio en la mayoría de los embalses menores de 100 hectáreas y en numerosos tramos del Guadiana y del Tajo es histórica y anterior al 15 de diciembre de 2007, como reconoce el propio Plan en su apartado 3.1.3 al referirse a las repoblaciones oficiales del siglo pasado, lo que sitúa a ambas especies en el régimen del artículo 64 ter de la Ley 42/2007.\n\n';
+    t += 'CUARTO. Que, al amparo del artículo 83 de la Ley 39/2015, formula las siguientes alegaciones.\n\n';
+
+    t += 'ALEGACIONES\n\n';
+    els.forEach(function (al, i) {
+      t += retitular(al.titulo, ORD[i]) + '\n';
+      al.cuerpo.forEach(function (p) { t += p + '\n'; });
+      t += 'SE SOLICITA: ' + al.solicita + '\n\n';
+    });
+
+    // Bloque de afección personal (solo si el usuario escribió algo)
+    const afec = val(campos.afeccion);
+    if (afec) {
+      t += retitular('X. Afección personal directa.', ORD[els.length]) + '\n';
+      t += afec + '\n';
+      t += 'SE SOLICITA: que se tenga en cuenta la afección concreta expuesta al valorar la proporcionalidad de las medidas proyectadas.\n\n';
+    }
+
+    t += 'SOLICITA\n\n';
+    t += 'Que se tenga por presentado este escrito en tiempo y forma, por formuladas las alegaciones que contiene frente a la versión inicial del Plan General Piscícola de Extremadura, se admitan, se incorporen al expediente y se estimen en sus propios términos, y que se notifique a quien suscribe la respuesta motivada conforme al artículo 83.3 de la Ley 39/2015.\n\n';
+
+    const lugar = val(campos.municipio) || '____________________';
+    t += 'En ' + lugar + ', a ____ de ____________ de 2026.\n\n';
+    t += 'Fdo.: ' + (val(campos.nombre) || '____________________');
+    return t;
+  }
+
+  // ============================================================
+  //  Refresco de la vista previa
+  // ============================================================
+  function refrescar() {
+    const n = elegidas().length;
+    const extra = val(campos.afeccion) ? 1 : 0;
+    preview.textContent = construirTexto();
+    contador.textContent = (n + extra) + ' alegaciones';
+    if (n === 0 && extra === 0) {
+      avisoRell.innerHTML = '<span class="text-rojo">No has seleccionado ninguna alegación. Marca al menos una arriba.</span>';
+    } else {
+      avisoRell.textContent = hayDatos()
+        ? 'Se descargará con tus datos ya incorporados.'
+        : 'Sin rellenar nada, se descarga en blanco para completar a mano.';
+    }
+    // Texto del botón de quitar/poner todas
+    btnToggle.textContent = (n === A.length) ? 'Quitar todas' : 'Poner todas';
+  }
+
+  // --- Eventos ---
+  Object.keys(campos).forEach(function (k) {
+    campos[k].addEventListener('input', refrescar);
+  });
+  lista.addEventListener('change', function (e) {
+    const cb = e.target.closest('input[type=checkbox]');
+    if (!cb) return;
+    const id = parseInt(cb.dataset.id, 10);
+    if (cb.checked) seleccion.add(id); else seleccion.delete(id);
+    refrescar();
+  });
+  btnToggle.addEventListener('click', function () {
+    const poner = seleccion.size < A.length;
+    seleccion.clear();
+    lista.querySelectorAll('input[type=checkbox]').forEach(function (cb) {
+      cb.checked = poner;
+      if (poner) seleccion.add(parseInt(cb.dataset.id, 10));
+    });
+    refrescar();
+  });
+
+  // ============================================================
+  //  DESCARGA EN WORD (.docx) con docx.js
+  // ============================================================
+  function nombreFichero(ext) {
+    const nom = val(campos.nombre);
+    const base = nom ? ('alegacion-pgpex-' + nom.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '')) : 'alegacion-pgpex';
+    return base + '.' + ext;
+  }
+
+  document.getElementById('btn-word').addEventListener('click', function () {
+    if (!window.docx) { alert('La librería de Word aún se está cargando. Prueba de nuevo en un segundo.'); return; }
+    const d = window.docx;
+    const els = elegidas();
+
+    const P = function (text, opts) {
+      opts = opts || {};
+      return new d.Paragraph({
+        alignment: opts.center ? d.AlignmentType.CENTER : d.AlignmentType.JUSTIFIED,
+        spacing: { after: opts.after == null ? 150 : opts.after, line: 268 },
+        children: [new d.TextRun({ text: text, bold: opts.bold, italics: opts.italics, size: 21, font: 'Calibri', color: opts.color })],
+      });
+    };
+    const FIELD = function (label, valor) {
+      return new d.Paragraph({
+        spacing: { after: 110 },
+        children: [
+          new d.TextRun({ text: label + ': ', bold: true, size: 21, font: 'Calibri' }),
+          new d.TextRun({ text: valor || '________________________________', size: 21, font: 'Calibri', color: valor ? '000000' : '888888' }),
+        ],
+      });
+    };
+    const RULE = new d.Paragraph({
+      spacing: { before: 140, after: 200 },
+      border: { bottom: { style: d.BorderStyle.SINGLE, size: 6, color: 'AAAAAA' } },
+      children: [new d.TextRun({ text: '', size: 2 })],
+    });
+    const H = function (text) {
+      return new d.Paragraph({ alignment: d.AlignmentType.CENTER, spacing: { before: 300, after: 160 },
+        children: [new d.TextRun({ text: text, bold: true, size: 23, font: 'Calibri' })] });
+    };
+    const SOL = function (text) {
+      return new d.Paragraph({ alignment: d.AlignmentType.JUSTIFIED, spacing: { after: 160, line: 268 }, indent: { left: 360 },
+        children: [ new d.TextRun({ text: 'SE SOLICITA: ', bold: true, size: 21, font: 'Calibri' }),
+                    new d.TextRun({ text: text, bold: true, size: 21, font: 'Calibri' }) ] });
+    };
+
+    const kids = [];
+    kids.push(new d.Paragraph({ alignment: d.AlignmentType.CENTER, spacing: { after: 60 },
+      children: [new d.TextRun({ text: 'ALEGACIONES A LA VERSIÓN INICIAL DEL PLAN GENERAL', bold: true, size: 25, font: 'Calibri' })] }));
+    kids.push(new d.Paragraph({ alignment: d.AlignmentType.CENTER, spacing: { after: 260 },
+      children: [new d.TextRun({ text: 'PISCÍCOLA DE EXTREMADURA (PGPEx)', bold: true, size: 25, font: 'Calibri' })] }));
+    kids.push(P('A LA DIRECCIÓN GENERAL DE CAZA, PESCA, ACUICULTURA, TAUROMAQUIA Y MEDIO NATURAL. CONSEJERÍA DE AGRICULTURA, GANADERÍA Y MEDIO NATURAL. JUNTA DE EXTREMADURA.', { bold: true, after: 240 }));
+
+    kids.push(FIELD('Nombre y apellidos', val(campos.nombre)));
+    kids.push(FIELD('DNI / NIE', val(campos.dni)));
+    kids.push(FIELD('Domicilio a efectos de notificaciones', val(campos.domicilio)));
+    kids.push(FIELD('Municipio y código postal', val(campos.municipio)));
+    kids.push(FIELD('Correo electrónico', val(campos.email)));
+    kids.push(FIELD('Teléfono', val(campos.telefono)));
+    kids.push(FIELD('Licencia / club / empresa (si procede)', val(campos.licencia)));
+
+    kids.push(P('Actuando en nombre propio, como pescador o pescadora deportiva y practicante de la pesca del black-bass y del lucio, comparece en el trámite de información pública de la versión inicial del Plan General Piscícola de Extremadura (PGPEx) y su estudio ambiental estratégico, abierto por Anuncio de 30 de junio de 2026 y publicado en el Diario Oficial de Extremadura n.º 132, de 10 de julio de 2026, y dentro del plazo conferido', { after: 200 }));
+
+    kids.push(H('EXPONE'));
+    kids.push(P('PRIMERO. Que ostenta la condición de interesado conforme al artículo 4 de la Ley 39/2015, por ser titular de intereses legítimos afectados por las determinaciones del Plan, y que practica habitualmente la pesca deportiva del black-bass y del lucio, tanto desde orilla como desde flotador o pato, catamarán y embarcación.'));
+    kids.push(P('SEGUNDO. Que manifiesta su rechazo a la aprobación del Plan en su redacción actual, por resultar manifiestamente perjudicial para esta modalidad deportiva, para sus competiciones y para la actividad económica y turística vinculada a ella.'));
+    kids.push(P('TERCERO. Que la presencia del black-bass y del lucio en la mayoría de los embalses menores de 100 hectáreas y en numerosos tramos del Guadiana y del Tajo es histórica y anterior al 15 de diciembre de 2007, como reconoce el propio Plan en su apartado 3.1.3 al referirse a las repoblaciones oficiales del siglo pasado, lo que sitúa a ambas especies en el régimen del artículo 64 ter de la Ley 42/2007.'));
+    kids.push(P('CUARTO. Que, al amparo del artículo 83 de la Ley 39/2015, formula las siguientes alegaciones.', { after: 200 }));
+    kids.push(RULE);
+
+    kids.push(H('ALEGACIONES'));
+    els.forEach(function (al, i) {
+      kids.push(new d.Paragraph({ alignment: d.AlignmentType.JUSTIFIED, spacing: { before: 220, after: 110, line: 268 },
+        children: [new d.TextRun({ text: retitular(al.titulo, ORD[i]), bold: true, size: 21, font: 'Calibri' })] }));
+      al.cuerpo.forEach(function (p) { kids.push(P(p)); });
+      kids.push(SOL(al.solicita));
+    });
+
+    const afec = val(campos.afeccion);
+    if (afec) {
+      kids.push(new d.Paragraph({ alignment: d.AlignmentType.JUSTIFIED, spacing: { before: 220, after: 110, line: 268 },
+        children: [new d.TextRun({ text: retitular('X. Afección personal directa.', ORD[els.length]), bold: true, size: 21, font: 'Calibri' })] }));
+      kids.push(P(afec));
+      kids.push(SOL('que se tenga en cuenta la afección concreta expuesta al valorar la proporcionalidad de las medidas proyectadas.'));
+    }
+    kids.push(RULE);
+
+    kids.push(H('SOLICITA'));
+    kids.push(P('Que se tenga por presentado este escrito en tiempo y forma, por formuladas las alegaciones que contiene frente a la versión inicial del Plan General Piscícola de Extremadura, se admitan, se incorporen al expediente y se estimen en sus propios términos, y que se notifique a quien suscribe la respuesta motivada conforme al artículo 83.3 de la Ley 39/2015.'));
+    const lugar = val(campos.municipio) || '______________________________';
+    kids.push(new d.Paragraph({ spacing: { before: 340, after: 120 }, children: [new d.TextRun({ text: 'En ' + lugar + ', a ______ de ____________________ de 2026.', size: 21, font: 'Calibri' })] }));
+    kids.push(new d.Paragraph({ spacing: { before: 420, after: 60 }, children: [new d.TextRun({ text: 'Fdo.: ' + (val(campos.nombre) || '______________________________________'), size: 21, font: 'Calibri' })] }));
+    kids.push(RULE);
+    kids.push(P('Modelo elaborado a partir del texto de la versión inicial del PGPEx sometido a información pública. No constituye asesoramiento jurídico: revisa y adapta el contenido a tu situación antes de presentarlo. Plazo de presentación: hasta el 14 de septiembre de 2026 (Anuncio de 30 de junio de 2026, DOE n.º 132, de 10 de julio de 2026). Puede presentarse por registro electrónico, en cualquier oficina de registro o por correo electrónico a gestionpiscicola@juntaex.es.', { italics: true, color: '767171' }));
+
+    const doc = new d.Document({
+      styles: { default: { document: { run: { font: 'Calibri', size: 21 } } } },
+      sections: [{ properties: { page: { margin: { top: 1080, right: 1080, bottom: 1080, left: 1080 } } }, children: kids }],
+    });
+    d.Packer.toBlob(doc).then(function (blob) { descargarBlob(blob, nombreFichero('docx')); });
+  });
+
+  // ============================================================
+  //  DESCARGA EN PDF con pdf-lib
+  // ============================================================
+  document.getElementById('btn-pdf').addEventListener('click', async function () {
+    if (!window.PDFLib) { alert('La librería de PDF aún se está cargando. Prueba de nuevo en un segundo.'); return; }
+    const { PDFDocument, StandardFonts, rgb } = window.PDFLib;
+    const pdf = await PDFDocument.create();
+    const font  = await pdf.embedFont(StandardFonts.Helvetica);
+    const fontB = await pdf.embedFont(StandardFonts.HelveticaBold);
+    const fontI = await pdf.embedFont(StandardFonts.HelveticaOblique);
+
+    const MARGIN = 56, WIDTH = 595.28, HEIGHT = 841.89, MAXW = WIDTH - MARGIN * 2;
+    let page = pdf.addPage([WIDTH, HEIGHT]);
+    let y = HEIGHT - MARGIN;
+
+    function nuevaPagina() { page = pdf.addPage([WIDTH, HEIGHT]); y = HEIGHT - MARGIN; }
+    // pdf-lib no soporta caracteres fuera de WinAnsi: sustituimos los problemáticos
+    function limpia(t) {
+      return t.replace(/[\u2018\u2019]/g, "'").replace(/[\u201C\u201D]/g, '"')
+              .replace(/\u2013/g, '-').replace(/\u2014/g, '-').replace(/\u2026/g, '...')
+              .replace(/\u00A0/g, ' ').replace(/\u00BA/g, 'o.');
+    }
+    function wrap(text, f, size) {
+      const words = limpia(text).split(/\s+/);
+      const lines = []; let line = '';
+      words.forEach(function (w) {
+        const test = line ? line + ' ' + w : w;
+        if (f.widthOfTextAtSize(test, size) > MAXW && line) { lines.push(line); line = w; }
+        else line = test;
+      });
+      if (line) lines.push(line);
+      return lines;
+    }
+    function escribe(text, opts) {
+      opts = opts || {};
+      const f = opts.bold ? fontB : (opts.italic ? fontI : font);
+      const size = opts.size || 9.5;
+      const lh = size * 1.38;
+      const align = opts.center ? 'center' : 'left';
+      const col = opts.gray ? rgb(0.45, 0.45, 0.45) : rgb(0, 0, 0);
+      wrap(text, f, size).forEach(function (ln) {
+        if (y < MARGIN + lh) nuevaPagina();
+        let x = MARGIN;
+        if (align === 'center') x = (WIDTH - f.widthOfTextAtSize(ln, size)) / 2;
+        page.drawText(ln, { x: x, y: y, size: size, font: f, color: col });
+        y -= lh;
+      });
+      y -= (opts.after == null ? 5 : opts.after);
+    }
+    function separador() {
+      if (y < MARGIN + 20) nuevaPagina();
+      y -= 4;
+      page.drawLine({ start: { x: MARGIN, y: y }, end: { x: WIDTH - MARGIN, y: y }, thickness: 0.6, color: rgb(0.7, 0.7, 0.7) });
+      y -= 12;
+    }
+    function campo(label, valor) {
+      if (y < MARGIN + 16) nuevaPagina();
+      page.drawText(limpia(label) + ': ', { x: MARGIN, y: y, size: 9.5, font: fontB });
+      const lw = fontB.widthOfTextAtSize(limpia(label) + ': ', 9.5);
+      page.drawText(valor ? limpia(valor) : '________________________________',
+        { x: MARGIN + lw, y: y, size: 9.5, font: font, color: valor ? rgb(0, 0, 0) : rgb(0.55, 0.55, 0.55) });
+      y -= 16;
+    }
+
+    const els = elegidas();
+    escribe('ALEGACIONES A LA VERSIÓN INICIAL DEL PLAN GENERAL', { bold: true, size: 12, center: true, after: 2 });
+    escribe('PISCÍCOLA DE EXTREMADURA (PGPEx)', { bold: true, size: 12, center: true, after: 12 });
+    escribe('A LA DIRECCIÓN GENERAL DE CAZA, PESCA, ACUICULTURA, TAUROMAQUIA Y MEDIO NATURAL. CONSEJERÍA DE AGRICULTURA, GANADERÍA Y MEDIO NATURAL. JUNTA DE EXTREMADURA.', { bold: true, after: 12 });
+
+    campo('Nombre y apellidos', val(campos.nombre));
+    campo('DNI / NIE', val(campos.dni));
+    campo('Domicilio a efectos de notificaciones', val(campos.domicilio));
+    campo('Municipio y código postal', val(campos.municipio));
+    campo('Correo electrónico', val(campos.email));
+    campo('Teléfono', val(campos.telefono));
+    campo('Licencia / club / empresa (si procede)', val(campos.licencia));
+    y -= 6;
+
+    escribe('Actuando en nombre propio, como pescador o pescadora deportiva y practicante de la pesca del black-bass y del lucio, comparece en el trámite de información pública de la versión inicial del Plan General Piscícola de Extremadura (PGPEx) y su estudio ambiental estratégico, abierto por Anuncio de 30 de junio de 2026 y publicado en el Diario Oficial de Extremadura n.º 132, de 10 de julio de 2026, y dentro del plazo conferido', { after: 10 });
+
+    escribe('EXPONE', { bold: true, size: 11, center: true, after: 8 });
+    escribe('PRIMERO. Que ostenta la condición de interesado conforme al artículo 4 de la Ley 39/2015, por ser titular de intereses legítimos afectados por las determinaciones del Plan, y que practica habitualmente la pesca deportiva del black-bass y del lucio, tanto desde orilla como desde flotador o pato, catamarán y embarcación.');
+    escribe('SEGUNDO. Que manifiesta su rechazo a la aprobación del Plan en su redacción actual, por resultar manifiestamente perjudicial para esta modalidad deportiva, para sus competiciones y para la actividad económica y turística vinculada a ella.');
+    escribe('TERCERO. Que la presencia del black-bass y del lucio en la mayoría de los embalses menores de 100 hectáreas y en numerosos tramos del Guadiana y del Tajo es histórica y anterior al 15 de diciembre de 2007, como reconoce el propio Plan en su apartado 3.1.3 al referirse a las repoblaciones oficiales del siglo pasado, lo que sitúa a ambas especies en el régimen del artículo 64 ter de la Ley 42/2007.');
+    escribe('CUARTO. Que, al amparo del artículo 83 de la Ley 39/2015, formula las siguientes alegaciones.', { after: 8 });
+    separador();
+
+    escribe('ALEGACIONES', { bold: true, size: 11, center: true, after: 8 });
+    els.forEach(function (al, i) {
+      escribe(retitular(al.titulo, ORD[i]), { bold: true, after: 4 });
+      al.cuerpo.forEach(function (p) { escribe(p); });
+      escribe('SE SOLICITA: ' + al.solicita, { bold: true, after: 8 });
+    });
+
+    const afec = val(campos.afeccion);
+    if (afec) {
+      escribe(retitular('X. Afección personal directa.', ORD[els.length]), { bold: true, after: 4 });
+      escribe(afec);
+      escribe('SE SOLICITA: que se tenga en cuenta la afección concreta expuesta al valorar la proporcionalidad de las medidas proyectadas.', { bold: true, after: 8 });
+    }
+    separador();
+
+    escribe('SOLICITA', { bold: true, size: 11, center: true, after: 8 });
+    escribe('Que se tenga por presentado este escrito en tiempo y forma, por formuladas las alegaciones que contiene frente a la versión inicial del Plan General Piscícola de Extremadura, se admitan, se incorporen al expediente y se estimen en sus propios términos, y que se notifique a quien suscribe la respuesta motivada conforme al artículo 83.3 de la Ley 39/2015.', { after: 14 });
+    const lugar = val(campos.municipio) || '______________________________';
+    escribe('En ' + lugar + ', a ______ de ____________________ de 2026.', { after: 24 });
+    escribe('Fdo.: ' + (val(campos.nombre) || '______________________________________'), { after: 14 });
+    separador();
+    escribe('Modelo elaborado a partir del texto de la versión inicial del PGPEx sometido a información pública. No constituye asesoramiento jurídico: revisa y adapta el contenido antes de presentarlo. Plazo: hasta el 14 de septiembre de 2026 (Anuncio de 30 de junio de 2026, DOE n.º 132, de 10 de julio de 2026). Puede presentarse por registro electrónico, en cualquier oficina de registro o por correo a gestionpiscicola@juntaex.es.', { italic: true, gray: true, size: 8 });
+
+    const bytes = await pdf.save();
+    descargarBlob(new Blob([bytes], { type: 'application/pdf' }), nombreFichero('pdf'));
+  });
+
+  // --- Descarga genérica de un blob ---
+  function descargarBlob(blob, nombre) {
+    const url = URL.createObjectURL(blob);
+    const a = document.createElement('a');
+    a.href = url; a.download = nombre;
+    document.body.appendChild(a); a.click(); document.body.removeChild(a);
+    setTimeout(function () { URL.revokeObjectURL(url); }, 1000);
+  }
+
+  // --- Copiar texto ---
+  const btnCop = document.getElementById('btn-copiar');
+  const txtCop = document.getElementById('txt-copiar');
+  btnCop.addEventListener('click', async function () {
+    try {
+      await navigator.clipboard.writeText(preview.textContent.trim());
+      txtCop.textContent = 'Texto copiado';
+      btnCop.classList.add('border-verde', 'text-verde');
+    } catch (e) { txtCop.textContent = 'Selecciona el texto y cópialo'; }
+    setTimeout(function () { txtCop.textContent = 'Copiar el texto'; btnCop.classList.remove('border-verde', 'text-verde'); }, 2600);
+  });
+
+  // Primer render
+  refrescar();
+})();
+</script>
+
+</body>
+</html>
