@@ -93,6 +93,70 @@
 </a>
 
 <!-- ============================================================
+     BANNER DE VICTORIA — el plan fue retirado (31/07/2026)
+     Se superpone sin borrar el contenido original de campaña.
+     ============================================================ -->
+
+<!-- Franja superior fija: corona toda la web -->
+<div class="sticky top-0 z-40 bg-verde text-asfalto">
+  <div class="max-w-6xl mx-auto px-4 sm:px-8 py-2.5 flex items-center justify-center gap-2 sm:gap-3 text-center">
+    <svg class="w-5 h-5 shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+      <path d="M20 6 9 17l-5-5"/>
+    </svg>
+    <p class="font-display font-bold uppercase text-sm sm:text-base tracking-wide">
+      ¡Lo conseguimos! La Junta retira el PGPEx de información pública
+    </p>
+    <button type="button" id="ver-mas-victoria" class="hidden sm:inline-flex items-center text-xs font-semibold underline underline-offset-2 hover:no-underline ml-2">
+      Ver detalles
+    </button>
+  </div>
+</div>
+
+<!-- Modal celebrativo: aparece al cargar, se puede cerrar -->
+<div id="modal-victoria" class="fixed inset-0 z-50 flex items-center justify-center p-4 bg-asfalto/85 backdrop-blur-sm">
+  <div class="relative max-w-lg w-full bg-pizarra border-2 border-verde rounded-2xl p-7 sm:p-9 shadow-2xl shadow-verde/20">
+
+    <button type="button" id="cerrar-victoria" aria-label="Cerrar" class="absolute top-4 right-4 text-hueso/50 hover:text-hueso transition-colors">
+      <svg class="w-6 h-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+    </button>
+
+    <!-- Insignia -->
+    <div class="flex justify-center mb-5">
+      <div class="w-16 h-16 rounded-full bg-verde/15 border-2 border-verde flex items-center justify-center">
+        <svg class="w-9 h-9 text-verde" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>
+      </div>
+    </div>
+
+    <p class="text-center font-mono text-[11px] tracking-[0.18em] text-verde uppercase mb-3">Victoria · 31 de julio de 2026</p>
+    <h2 class="text-center font-display font-extrabold uppercase text-3xl sm:text-4xl leading-tight mb-4">
+      El plan queda retirado
+    </h2>
+
+    <p class="text-sm sm:text-base text-hueso/80 leading-relaxed mb-4">
+      La Junta de Extremadura ha anunciado que <strong class="text-hueso">retira el Plan General
+      Piscícola de información pública</strong>, reconociendo la inquietud generada entre la comunidad
+      de pescadores de la región. Cualquier planificación futura, se comprometen, se hará
+      <strong class="text-hueso">con diálogo, transparencia y seguridad jurídica</strong>.
+    </p>
+    <p class="text-sm text-hueso/70 leading-relaxed mb-6">
+      Esto es lo que consiguen las alegaciones cuando se presentan en masa. Gracias a cada pescador,
+      club, guía y tienda que dio la cara. La orilla se defiende también desde aquí.
+    </p>
+
+    <div class="flex flex-col sm:flex-row gap-3">
+      <a href="https://www.juntaex.es/w/agricultura-retirara-en-plan-general-piscicola-de-informacion-publica" target="_blank" rel="noopener"
+         class="flex-1 inline-flex items-center justify-center gap-2 bg-verde hover:bg-[#2CBE6A] text-asfalto font-bold px-5 py-3 rounded-md transition-colors text-sm">
+        Leer el anuncio oficial
+      </a>
+      <button type="button" id="cerrar-victoria-2"
+              class="flex-1 inline-flex items-center justify-center border border-borde hover:border-hueso/40 text-hueso font-semibold px-5 py-3 rounded-md transition-colors text-sm">
+        Ver la campaña
+      </button>
+    </div>
+  </div>
+</div>
+
+<!-- ============================================================
      1. HERO — titular, urgencia y CTA principal
      ============================================================ -->
 <header class="relative overflow-hidden border-b border-borde">
@@ -320,6 +384,41 @@
     </div>
 
     <p id="ca-fecha" class="mt-6 text-sm text-hueso/60"></p>
+  </div>
+</section>
+
+<!-- ============================================================
+     3-BIS. CONTADOR DE VICTORIA — tiempo transcurrido desde la retirada
+     ============================================================ -->
+<section class="border-b border-verde/30 bg-verde/[0.07]">
+  <div class="max-w-6xl mx-auto px-5 sm:px-8 py-12 sm:py-16 text-center">
+
+    <p class="font-mono text-[11px] sm:text-xs tracking-[0.18em] text-verde uppercase mb-4">
+      Tiempo desde que lo conseguimos
+    </p>
+
+    <div id="cuenta-victoria" class="flex justify-center gap-3 sm:gap-6" role="timer" aria-live="off">
+      <div class="min-w-[72px] sm:min-w-[110px] bg-asfalto border border-verde/40 rounded-lg px-3 sm:px-6 py-4">
+        <div id="cv-dias" class="font-display font-extrabold text-4xl sm:text-6xl leading-none tabular-nums text-verde">--</div>
+        <div class="font-mono text-[10px] sm:text-xs uppercase tracking-widest text-hueso/50 mt-2">Días</div>
+      </div>
+      <div class="min-w-[72px] sm:min-w-[110px] bg-asfalto border border-verde/40 rounded-lg px-3 sm:px-6 py-4">
+        <div id="cv-horas" class="font-display font-extrabold text-4xl sm:text-6xl leading-none tabular-nums">--</div>
+        <div class="font-mono text-[10px] sm:text-xs uppercase tracking-widest text-hueso/50 mt-2">Horas</div>
+      </div>
+      <div class="min-w-[72px] sm:min-w-[110px] bg-asfalto border border-verde/40 rounded-lg px-3 sm:px-6 py-4">
+        <div id="cv-min" class="font-display font-extrabold text-4xl sm:text-6xl leading-none tabular-nums">--</div>
+        <div class="font-mono text-[10px] sm:text-xs uppercase tracking-widest text-hueso/50 mt-2">Min</div>
+      </div>
+      <div class="min-w-[72px] sm:min-w-[110px] bg-asfalto border border-verde/40 rounded-lg px-3 sm:px-6 py-4">
+        <div id="cv-seg" class="font-display font-extrabold text-4xl sm:text-6xl leading-none tabular-nums">--</div>
+        <div class="font-mono text-[10px] sm:text-xs uppercase tracking-widest text-hueso/50 mt-2">Seg</div>
+      </div>
+    </div>
+
+    <p class="mt-6 text-sm text-hueso/60">
+      La Junta retiró el plan el 31 de julio de 2026. Esto lo logró la comunidad de pescadores.
+    </p>
   </div>
 </section>
 
@@ -718,9 +817,7 @@
         <span class="text-hueso/25">|</span>
         <span class="inline-flex items-center gap-1.5">
           Hecho con
-          <svg class="w-3.5 h-3.5 text-rojo inline-block" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
-            <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/>
-          </svg>
+          <span class="text-rojo" aria-hidden="true">❤️</span>
           para Extremadura
           <span class="inline-flex w-5 h-3.5 rounded-sm overflow-hidden align-middle ring-1 ring-white/10" aria-hidden="true">
             <span class="flex-1 bg-[#009A44]"></span><span class="flex-1 bg-white"></span><span class="flex-1 bg-[#0B0D0E]"></span>
@@ -733,6 +830,32 @@
 
 
 <script>
+/* ============================================================
+   BANNER DE VICTORIA — control del modal (cerrar / reabrir)
+   ============================================================ */
+(function () {
+  const modal   = document.getElementById('modal-victoria');
+  const cerrar  = document.getElementById('cerrar-victoria');
+  const cerrar2 = document.getElementById('cerrar-victoria-2');
+  const verMas  = document.getElementById('ver-mas-victoria');
+
+  function ocultar() { modal.style.display = 'none'; document.body.style.overflow = ''; }
+  function mostrar() { modal.style.display = 'flex'; }
+
+  // Al cargar, el modal está visible y bloquea el scroll de fondo
+  document.body.style.overflow = 'hidden';
+
+  cerrar.addEventListener('click', ocultar);
+  cerrar2.addEventListener('click', ocultar);
+  // Clic fuera de la tarjeta también cierra
+  modal.addEventListener('click', function (e) { if (e.target === modal) ocultar(); });
+  // Tecla Escape cierra
+  document.addEventListener('keydown', function (e) { if (e.key === 'Escape') ocultar(); });
+  // "Ver detalles" de la franja superior reabre el modal
+  if (verMas) verMas.addEventListener('click', mostrar);
+})();
+
+
 /* ============================================================
    CONFIGURACIÓN — lo único que necesitas tocar
    ============================================================ */
@@ -791,6 +914,34 @@ const TEXTO_COMPARTIR =
 
   refrescar();
   const temporizador = setInterval(refrescar, 1000);
+})();
+
+
+/* ============================================================
+   CONTADOR DE VICTORIA — tiempo transcurrido desde la retirada
+   ============================================================ */
+(function () {
+  // Momento del anuncio oficial de retirada del plan
+  const VICTORIA = new Date('2026-07-31T14:26:00+02:00');
+  const dias  = document.getElementById('cv-dias');
+  const horas = document.getElementById('cv-horas');
+  const min   = document.getElementById('cv-min');
+  const seg   = document.getElementById('cv-seg');
+  if (!dias) return;
+
+  const dd = n => String(n).padStart(2, '0');
+
+  function refrescar() {
+    const t = Date.now() - VICTORIA.getTime();
+    if (t < 0) return;
+    const s = Math.floor(t / 1000);
+    dias.textContent  = Math.floor(s / 86400);
+    horas.textContent = dd(Math.floor(s / 3600) % 24);
+    min.textContent   = dd(Math.floor(s / 60) % 60);
+    seg.textContent   = dd(s % 60);
+  }
+  refrescar();
+  setInterval(refrescar, 1000);
 })();
 
 

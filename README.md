@@ -1,26 +1,38 @@
 # 🎣 Stop PGPEx: defendamos la pesca del black-bass y el lucio en Extremadura
 
-> Herramienta ciudadana para presentar alegaciones a la versión inicial del **Plan General Piscícola de Extremadura (PGPEx)** durante su trámite de información pública.
+> Herramienta ciudadana que facilitó presentar alegaciones al **Plan General Piscícola de Extremadura (PGPEx)** durante su trámite de información pública.
 
 🔗 **Web:** [stop-pgpex.github.io](https://stop-pgpex.github.io/)
 
 ---
 
-## 🌊 Por qué existe esto
+## 🏆 Lo conseguimos
+
+**El 31 de julio de 2026, la Junta de Extremadura anunció la retirada del Plan General Piscícola de información pública**, reconociendo expresamente la inquietud generada entre la comunidad de pescadores de la región, y se comprometió a que cualquier planificación futura se hará con diálogo, transparencia y seguridad jurídica.
+
+Fue una victoria de mucha gente: pescadores, clubes, guías, tiendas y pueblos que se organizaron y dieron la cara. Esta web fue una de las herramientas de esa movilización, y se mantiene en línea como testimonio de lo que se logró. Lo que sigue explica qué fue y por qué.
+
+📄 [Anuncio oficial de la retirada](https://www.juntaex.es/w/agricultura-retirara-en-plan-general-piscicola-de-informacion-publica)
+
+---
+
+## 🌊 Por qué existió esto
 
 Soy toledano, pero llevo pescando en Extremadura desde que mi padre y mi abuelo me llevaron por primera vez a la orilla de un embalse. De eso hace ya unos cuantos años. La pesca del black-bass y del lucio no es solo un deporte: es tiempo con la familia, es conocer cada rincón de estos ríos y pantanos, y es toda una comunidad de pescadores, guías, tiendas, clubes y pueblos que viven de ello.
 
-La versión inicial del PGPEx, tal y como está redactada, pone en riesgo todo eso. Y mucha gente que se vería afectada ni siquiera sabe que el plan está en trámite ni que **cualquiera puede presentar alegaciones**, y que la Administración está obligada por ley a responder cada una de ellas.
+La versión inicial del PGPEx, tal y como estaba redactada, ponía en riesgo todo eso. Y mucha gente que se veía afectada ni siquiera sabía que el plan estaba en trámite ni que **cualquiera podía presentar alegaciones**, y que la Administración estaba obligada por ley a responder cada una de ellas.
 
-Esta web nace para cambiar eso: para que presentar una alegación bien fundada deje de ser algo reservado a quien sabe de trámites administrativos y pase a estar al alcance de cualquier pescador, en cinco minutos y desde el móvil.
+Esta web nació para cambiar eso: para que presentar una alegación bien fundada dejara de ser algo reservado a quien sabe de trámites administrativos y pasara a estar al alcance de cualquier pescador, en cinco minutos y desde el móvil.
 
-## ⚙️ Qué hace
+## ⚙️ Qué hacía
 
-- **Explica el plan** de forma clara, con cada afirmación referenciada al apartado concreto del PGPEx del que sale, para que nadie tenga que fiarse de nuestra palabra y pueda contrastarlo con el documento oficial.
-- **Genera un escrito de alegaciones** completo y jurídicamente fundado, con catorce puntos que impugnan las medidas más lesivas del plan y proponen una redacción alternativa para cada una.
-- **Permite personalizarlo**: rellenas tus datos, eliges qué alegaciones incluir y añades tu caso concreto. El documento se ajusta y se renumera solo.
-- **Descarga en Word o en PDF**, listo para presentar por registro electrónico, en cualquier oficina de registro o por correo electrónico.
-- **Explica cómo presentarlo**, paso a paso, tanto por vía telemática como presencial.
+- **Explicaba el plan** de forma clara, con cada afirmación referenciada al apartado concreto del PGPEx del que salía, para que nadie tuviera que fiarse de nuestra palabra y pudiera contrastarlo con el documento oficial.
+- **Generaba un escrito de alegaciones** completo y jurídicamente fundado, con catorce puntos que impugnaban las medidas más lesivas del plan y proponían una redacción alternativa para cada una.
+- **Permitía personalizarlo**: rellenabas tus datos, elegías qué alegaciones incluir y añadías tu caso concreto. El documento se ajustaba y se renumeraba solo.
+- **Descargaba en Word o en PDF**, listo para presentar por registro electrónico, en cualquier oficina de registro o por correo electrónico.
+- **Explicaba cómo presentarlo**, paso a paso, tanto por vía telemática como presencial.
+
+La herramienta sigue operativa en la web, por si resulta útil como referencia o si en el futuro se abre un nuevo trámite.
 
 ## 🔒 Privacidad
 
@@ -64,17 +76,19 @@ Al ser una web estática, basta con servir estos archivos desde cualquier hostin
 
 ## 🤝 Cómo colaborar
 
-Cualquier aportación es bienvenida: correcciones de datos, mejoras de accesibilidad, revisión de los argumentos jurídicos o difusión de la iniciativa. Puedes abrir un *issue* o un *pull request*.
+Aunque la campaña cumplió su objetivo, cualquier aportación al proyecto sigue siendo bienvenida: mejoras de accesibilidad, correcciones o adaptación de la herramienta por si vuelve a hacer falta. Puedes abrir un *issue* o un *pull request*.
 
-Si no eres de perfil técnico y quieres ayudar, lo más valioso que puedes hacer es sencillo: **presenta tu alegación y comparte la web** con tu club, tu grupo de pesca y tu tienda de confianza. Cada alegación individual cuenta, y cuantas más se presenten, más difícil será ignorarlas.
+Y si en el futuro se abre un nuevo trámite, lo más valioso que puede hacer cualquiera es sencillo: **participar y difundirlo**. Esta victoria demostró que, cuando la comunidad se organiza, la Administración escucha.
 
 ## ⚖️ Aviso legal
 
-Iniciativa ciudadana independiente, sin vinculación con la Junta de Extremadura ni con ninguna administración pública. El modelo de alegación es orientativo y no constituye asesoramiento jurídico. La información de referencia es el texto oficial de la versión inicial del PGPEx publicado en el trámite de información pública, que prevalece sobre cualquier resumen de esta web.
+Iniciativa ciudadana independiente, sin vinculación con la Junta de Extremadura ni con ninguna administración pública. El modelo de alegación es orientativo y no constituyó asesoramiento jurídico. La información de referencia era el texto oficial de la versión inicial del PGPEx publicado en el trámite de información pública, que prevalecía sobre cualquier resumen de esta web.
 
-## ⏳ Plazo
+## 📅 Cronología
 
-El trámite de información pública está abierto **hasta el 14 de septiembre de 2026** (Anuncio de 30 de junio de 2026, DOE n.º 132, de 10 de julio de 2026).
+- **10 de julio de 2026:** La Junta publica la versión inicial del PGPEx y abre el trámite de información pública (Anuncio de 30 de junio de 2026, DOE n.º 132), con plazo de alegaciones hasta el 14 de septiembre de 2026.
+- **Julio de 2026:** La comunidad de pescadores se moviliza. Se ponen en marcha campañas de difusión y herramientas como esta web para facilitar la presentación de alegaciones.
+- **31 de julio de 2026:** La Junta anuncia la **retirada del plan de información pública**, y se compromete a reformar antes la Ley de Pesca de Extremadura y a que cualquier planificación futura se haga con diálogo, transparencia y seguridad jurídica.
 
 ---
 
